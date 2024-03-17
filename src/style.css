@@ -50,6 +50,13 @@ header {
   line-height: 1;
   border-radius: 5px;
 }
+main {
+  padding: 30px 0;
+}
+.weather-app-data {
+  display: flex;
+  justify-content: space-between;
+}
 footer {
   color: rgba(39, 33, 66, 0.4);
   border-top: 1px solid #f9f7fe;
