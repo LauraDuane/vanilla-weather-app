@@ -5,38 +5,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my little vanilla weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
+    <title>my little vanilla weather app</title>
   </head>
   <body>
     <div class="weather-body">
       <header>
         <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="search" />
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-input"
+          />
+          <input type="submit" value="search" class="search-button" />
         </form>
       </header>
       <main>
         <div>
           <h1>New York</h1>
           <p>
-            Tuesday 2:49, scattered clouds
-            <br />
-            Humidity: 66% wind: 5mph
+            <bold>
+              Tuesday 2:49, scattered clouds
+              <br />
+              Humidity: 66% wind: 5mph
+            </bold>
           </p>
         </div>
         🌤 70°F
       </main>
       <footer>
-        Coded by
+        <bold>Coded by</bold>
         <a href="https://github.com/LauraDuane" target="_blank">Laura Duane,</a>
-        is Open-Sourced on
+        <bold>is Open-Sourced on</bold>
         <a
           href="https://github.com/LauraDuane/vanilla-weather-app"
           target="_blank"
           >Github</a
         >
-        and Hosted on
+        <bold>and Hosted on</bold>
         <a href="https://lauras-vanilla-weather.netlify.app/" target="_blank"
           >Netlify</a
         >
