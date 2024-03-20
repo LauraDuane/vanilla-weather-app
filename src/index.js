@@ -4,6 +4,8 @@ function updateWeather(response) {
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
 
+  console.log(response.data.temperature.current);
+
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
 }
@@ -24,4 +26,4 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("New York City");
+searchCity("Paris");
