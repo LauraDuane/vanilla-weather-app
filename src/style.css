@@ -72,14 +72,14 @@ main {
   display: flex;
 }
 .weather-app-temperature {
-  font-size: 68px;
+  font-size: 88px;
   font-weight: bold;
+  line-height: 1px;
 }
 
 .weather-app-emoji {
-  font-size: 45px;
-  margin-top: 10px;
-  margin-right: 10px;
+  width: 88px;
+  height: 88px;
 }
 .weather-app-unit {
   font-size: 28px;
