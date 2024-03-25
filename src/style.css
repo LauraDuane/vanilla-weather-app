@@ -89,13 +89,17 @@ main {
   margin-top: -2px;
   position: relative;
 }
-.weather-forcast {
+.weather-forecast {
   margin-top: 20px;
   text-align: center;
   font-size: 13px;
 }
-.weather-forcast-date {
-  opacity: 0.6px;
+.weather-forecast-date {
+  font-size: 900;
+}
+
+.highs {
+  font-weight: bold;
 }
 footer {
   color: rgba(39, 33, 66, 0.4);
