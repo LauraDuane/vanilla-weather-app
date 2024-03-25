@@ -74,16 +74,20 @@ main {
 .weather-app-temperature {
   font-size: 88px;
   font-weight: bold;
-  line-height: 1px;
+  line-height: 80px;
 }
 
 .weather-app-emoji {
+  position: relative;
+  top: -8px;
   width: 88px;
   height: 88px;
+  margin-right: 10px;
 }
 .weather-app-unit {
   font-size: 28px;
-  margin-top: 10px;
+  margin-top: -2px;
+  position: relative;
 }
 footer {
   color: rgba(39, 33, 66, 0.4);
