@@ -89,6 +89,14 @@ main {
   margin-top: -2px;
   position: relative;
 }
+.weather-forcast {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+.weather-forcast-date {
+  opacity: 0.6px;
+}
 footer {
   color: rgba(39, 33, 66, 0.4);
   border-top: 1px solid #f9f7fe;
