@@ -55,7 +55,13 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
-function displayForecast() {
+function getforecast(city) {
+  let apiKey = "e6o3f7bda6befc81749240et021aae9f";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let forecast = document.querySelector("#forecast");
 
   let days = ["sun", "mon", "tues", "wed", "thur", "fri", "sat"];
@@ -64,7 +70,7 @@ function displayForecast() {
 
   days.forEach(function (day) {
     forecastHtml =
-      forecast +
+      forecastHtml +
       `<div class="weather-forecast-day">
 <div class="weather-forecast-date">${day}</div>
               <div class="weather-forecast-icon">🪐</div>
@@ -80,4 +86,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Portland");
-displayForecast();
+getForecast("Portland");
