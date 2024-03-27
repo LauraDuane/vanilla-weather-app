@@ -12,6 +12,7 @@ function updateWeather(response) {
 
   console.log(response.data);
 
+  cityElement.innerHTML = response.data.city;
   timeElement.innerHTML = formatDate(date);
   windElement.innerHTML = `${response.data.wind.speed}mph`;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
@@ -20,6 +21,7 @@ function updateWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img
                 src="${response.data.condition.icon_url}" class="weather-app-icon" /> `;
+  getforecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -62,8 +64,6 @@ function getforecast(city) {
 }
 
 function displayForecast(response) {
-  let forecast = document.querySelector("#forecast");
-
   let days = ["sun", "mon", "tues", "wed", "thur", "fri", "sat"];
 
   let forecastHtml = "";
@@ -79,6 +79,8 @@ function displayForecast(response) {
               </div>
                 </div>`;
   });
+
+  let forcastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
 
@@ -86,4 +88,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Portland");
-getForecast("Portland");
